@@ -28,7 +28,7 @@
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="NeteasePush">
-        <param name="android-package" value="udata.npns" />
+        <param name="android-package" value="udata.npns.NeteasePush" />
         <param name="onload" value="true" />
       </feature>
     </config-file>
@@ -129,9 +129,9 @@
 
     </config-file>
 
-    <!--<source-file src="src/android/v2/XGPushPlugin.java" target-dir="src/com/eteng/push/xgpush2" />-->
-    <!--<source-file src="src/android/v2/XGCordovaPushReceiver.java" target-dir="src/com/eteng/push/xgpush2" />-->
-    <!--<source-file src="src/android/v2/XGCordovaOperateCallback.java" target-dir="src/com/eteng/push/xgpush2" />-->
+    <source-file src="src/android/udata/npns/MessageReceiver.java" target-dir="src/udata/npns" />
+    <source-file src="src/android/udata/npns/NeteasePush.java" target-dir="src/udata/npns" />
+    <source-file src="src/android/udata/npns/PushPlugin.java" target-dir="src/udata/npns" />
     <!--<source-file src="src/android/v2/XGCordova.java" target-dir="src/com/eteng/push/xgpush2" />-->
     <!--<source-file src="src/android/v2/ReceiverManager.java" target-dir="src/com/eteng/push/xgpush2" />-->
 

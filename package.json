@@ -1,0 +1,15 @@
+{
+  "name": "npns-cordova",
+  "version": "0.0.1",
+  "description": "Netease Push Service: http://npns.x.netease.com/",
+  "main": "npns.js",
+  "dependencies": {
+    "eventemitter3": "^1.1.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charleschaochen/cordova-plugin-npns"
+  },
+  "author": "Chen Chao"
+}

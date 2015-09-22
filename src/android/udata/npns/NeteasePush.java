@@ -30,6 +30,7 @@ public class NeteasePush extends PushPlugin {
 
     @Override
     protected boolean addListener(Context context, CallbackContext callback) {
+		return true;
     }
 
 }

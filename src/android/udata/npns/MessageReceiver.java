@@ -9,8 +9,7 @@ import com.netease.npnssdk.interfaces.BaseReceiver;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.content.LocalBroadcastManager;
-import org.apache.cordova.api.PluginResult;
+import org.apache.cordova.PluginResult;
 import org.json.JSONObject;
 
 

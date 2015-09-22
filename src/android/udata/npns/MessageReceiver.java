@@ -51,12 +51,16 @@ public class MessageReceiver extends BaseReceiver {
                     updateAndSaveMessage(context, message);
                 }
             });
-            */
 
-            JSONObject obj = new JSONObject();
-            obj.put("token", deviceToken);
-            obj.put("msg", message);
-            NeteasePush.pushContext.success(obj);
+            */
+            try {
+				JSONObject obj = new JSONObject();
+				obj.put("token", deviceToken);
+				obj.put("msg", message);
+				NeteasePush.pushContext.success(obj);
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
         } else {
             message = "register to NPNS server failed!";
             NeteasePush.pushContext.error(message);

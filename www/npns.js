@@ -1,7 +1,7 @@
 /**
  * Created by charles on 15/9/21.
  */
-var EventEmitter = require('eventemitter3');
+var EventEmitter = require('./eventemitter3');
 var exec = cordova.require('cordova/exec');
 
 /**

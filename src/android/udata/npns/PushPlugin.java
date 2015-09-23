@@ -16,7 +16,7 @@ public abstract class PushPlugin extends CordovaPlugin {
     private static final String ACTION_UNREGISTER_PUSH = "unregisterpush";
     private static final String ACTION_ADD_LISTENER = "addlistener";
 
-    abstract protected boolean registerPush(Context context, String alias, CallbackContext callback);
+    abstract protected boolean registerPush(Context context, CallbackContext callback);
     abstract protected boolean unregisterPush(Context context, CallbackContext callback);
     abstract protected boolean addListener(Context context, CallbackContext callback);
 
@@ -26,8 +26,7 @@ public abstract class PushPlugin extends CordovaPlugin {
         Context context = cordova.getActivity().getApplicationContext();
 
         if (ACTION_REGISTER_PUSH.equals(action)) {
-            String alias = args.getString(0);
-            return registerPush(context, alias, callbackContext);
+            return registerPush(context, callbackContext);
 
         } else if (ACTION_UNREGISTER_PUSH.equals(action)) {
             return unregisterPush(context, callbackContext);

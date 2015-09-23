@@ -31,6 +31,8 @@ public class MessageReceiver extends BaseReceiver {
     
     @Override
     protected void onRegistrationStateReceived(final Context context, int statusCode, String deviceToken) {
+        NeteasePush.pushContext.success("enter MessageReceiver。onRegistrationStateReceived，" + deviceToken);
+
         super.onRegistrationStateReceived(context, statusCode, deviceToken);
         
         String message = "";

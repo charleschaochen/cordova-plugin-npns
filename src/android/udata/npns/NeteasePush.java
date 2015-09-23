@@ -18,6 +18,7 @@ public class NeteasePush extends PushPlugin {
     @Override
     protected boolean registerPush(Context context, CallbackContext callback) {
         pushContext = callback;
+        callback.success("enter NeteasePush.registerPush");
         Log.d(TAG, "> register");
         NpnsSdkInterface.registerPush(context, APP_ID, TICKET, MessageReceiver.class);
         return true;

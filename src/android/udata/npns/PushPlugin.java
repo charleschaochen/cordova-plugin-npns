@@ -24,7 +24,7 @@ public abstract class PushPlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         Log.d(TAG, "> plugin invoke");
         Context context = cordova.getActivity().getApplicationContext();
-        callbackContext.success("enter CordovaPlugin.execute");
+
         if (ACTION_REGISTER_PUSH.equals(action)) {
             return registerPush(context, callbackContext);
 

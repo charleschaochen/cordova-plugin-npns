@@ -10,7 +10,7 @@ import com.netease.npnssdk.interfaces.BaseReceiver;
 import android.content.Context;
 import android.content.Intent;
 import org.apache.cordova.PluginResult;
-//import org.json.JSONObject;
+import org.json.JSONObject;
 
 
 /**
@@ -54,10 +54,10 @@ public class MessageReceiver extends BaseReceiver {
 
             */
             try {
-//				JSONObject obj = new JSONObject();
-//				obj.put("token", deviceToken);
-//				obj.put("msg", message);
-				NeteasePush.pushContext.success(deviceToken);
+				JSONObject obj = new JSONObject();
+				obj.put("token", deviceToken);
+				obj.put("msg", message);
+				NeteasePush.pushContext.success(obj);
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}

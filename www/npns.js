@@ -55,15 +55,14 @@ NeteasePush.prototype.registerReceiver = function(success, error) {
  *   console.log('oh no: ' + errCode);
  * });
  */
-NeteasePush.prototype.registerPush = function() {
+NeteasePush.prototype.registerPush = function(alias) {
     var exec = this.exec;
     return new Promise(function(resolve, reject) {
         exec(
             resolve, reject,
             NeteasePush.SERVICE, NeteasePush.ACTION_REGISTER_PUSH,
-            []
+            [alias]
         );
     });
 };
-
 module.exports = new NeteasePush();
